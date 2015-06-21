@@ -40,6 +40,8 @@ cacheSolve <- function(x, ...) {
     }
     ## otherwise, retrieve matrix and calculate inverse
     invs <- solve(x$getmatrix())
+    
+    ## cache calculated inverse in x
     x$setinverse(invs)
     
     ## Return a matrix that is the inverse of 'x'
